@@ -1,0 +1,67 @@
+//
+//  PrefixHeader.pch
+//  金冠视频
+//
+//  Created by jin on 16/3/10.
+//  Copyright © 2016年 jin. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#pragma mark - Header
+
+#import "YMMacros.h"
+//#import "Constants.h"
+
+#pragma mark - Categories
+
+#import "NSString+YMUtilities.h"
+#import "UIColor+YMUtilities.h"
+#import "UIView+Frame.h"
+#import "UIImageView+YMSDImageLoader.h"
+#import "UIImage+Common.h"
+
+#pragma mark - Framework
+
+#import <Masonry/Masonry.h>
+#import <SDWebImage/UIImageView+WebCache.h>
+#import <YLGIFImage/YLGIFImage.h>
+#import <YLGIFImage/YLImageView.h>
+#import <KMNavigationBarTransition/UIViewController+KMNavigationBarTransition.h>
+#import <GMCPagingScrollView/GMCPagingScrollView.h>
+#import "AAPullToRefresh.h"
+
+#define LOG_LEVEL_DEF ddLogLevel
+#import <CocoaLumberjack/CocoaLumberjack.h>
+static const DDLogLevel ddLogLevel = DDLogLevelVerbose;
+
+#import <JTSImageViewController/JTSImageViewController.h>
+
+#pragma mark - Other
+
+#import "YMUIFactory.h"
+#import "YMUtilities.h"
+#import "YMHTTPRequester.h"
+
+#pragma mark - NSEnum
+
+typedef NS_ENUM(NSUInteger, MLBActionType) {
+    MLBActionTypeDiary,
+    MLBActionTypePraise,
+    MLBActionTypeMore,
+};
+
+typedef NS_ENUM(NSUInteger, MLBReadType) {
+    MLBReadTypeEssay,
+    MLBReadTypeSerial,
+    MLBReadTypeQuestion,
+};
+
+#pragma mark - Block
+
+typedef void(^CommonActionBlock)(void);
+#endif /* PrefixHeader_pch */
